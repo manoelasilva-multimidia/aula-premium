@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: url('jost-regular.ttf')
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-style: italic;
+    font-weight: 400;
+    src: url('jost-italic.ttf')
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: bold;
+    src: url('jost-bold.ttf')
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-style: italic;
+    font-weight: bold;
+    src: url('jost-bolditalic.woff')
+}

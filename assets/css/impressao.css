@@ -1,0 +1,241 @@
+body.modo-impressao >*:not(#impressaoFinal) {
+	display: none;
+}
+
+body.modo-impressao {
+	margin: 0;
+	padding: 0;
+	letter-spacing: initial;
+	overflow: initial !important;
+	background-color: white !important;
+	margin: 1cm auto;
+	background: unset !important;
+}
+
+.modo-impressao * {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.modo-impressao .page p,
+.modo-impressao .page span {
+	font-size: 13px !important;
+}
+
+.modo-impressao .page {
+	width: 21cm;
+	padding: 0 1cm;
+	margin-bottom: 0;
+	border: 1px #d3d3d3 solid;
+	background: white;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+	margin: 0;
+	border: initial;
+	border-radius: initial;
+	width: initial;
+	min-height: initial;
+	box-shadow: initial;
+	background: initial;
+	page-break-after: auto;
+}
+
+@page {
+	size: A4;
+	margin: 0;
+	margin-top: 1cm;
+}
+
+.modo-impressao .questao,
+.modo-impressao .cont {
+	page-break-inside: avoid;
+}
+
+.modo-impressao .questao__header p {
+	z-index: 1;
+	position: relative;
+	display: inline-block;
+	font-weight: bold;
+	padding-right: 10px;
+	background-color: #fff;
+	color: #000;
+	text-transform: uppercase;
+}
+
+.modo-impressao .questao__header hr {
+	border-top: 1px solid #e5e5e5;
+	position: relative;
+	top: -14px;
+}
+
+.modo-impressao .questao {
+	padding: 0.5cm 20px;
+	margin-bottom: 0.5cm;
+}
+
+.modo-impressao .page .questao:last-child {
+	margin-bottom: 0.2rem;
+}
+
+.modo-impressao .alo {
+	position: absolute;
+	bottom: 0;
+}
+
+.modo-impressao .questao__respostas__mult__img {
+	width: 100%;
+	padding: 20px 0px;
+	margin: 0px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+}
+
+.modo-impressao .questao__respostas__mult__img .questao__resposta {
+	width: 20%;
+}
+
+.modo-impressao .questao__resposta__index {
+	color: #444;
+}
+
+.modo-impressao .questao__resposta {
+	color: #222;
+}
+
+.modo-impressao .questao__respostas__expressao {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+.modo-impressao .questao__respostas__expressao .expressao {
+	padding: 5px 10px;
+	border: 1px solid #999;
+	font-weight: 600;
+	border-radius: 5px;
+}
+
+.modo-impressao .resposta__preenchimento {
+	width: 100%;
+	height: 50px;
+	margin: 10px 0px;
+	padding: 5px;
+	border: 1px solid #999;
+}
+
+.modo-impressao .item__resposta__preenchimento {
+	width: 100%;
+	height: 50px;
+	border: 1px solid #999;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.modo-impressao .item {
+	width: fit-content;
+	padding: 10px 15px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #999;
+	border-radius: 5px;
+}
+
+.modo-impressao .dropzone__img {
+	margin: 10px 0px;
+}
+
+.modo-impressao li.dropzone__item {
+	list-style: none;
+}
+
+.modo-impressao p.impresso-title {
+	color: #000;
+	width: 60px;
+	font-weight: bold;
+}
+
+.modo-impressao .legenda {
+	width: fit-content;
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+	-moz-column-count: 2; /* Firefox */
+	column-count: 2;
+	-webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+	-moz-column-gap: 40px; /* Firefox */
+	column-gap: 40px;
+	-webkit-column-rule: 1px solid #cccccc; /* Chrome, Safari, Opera */
+	-moz-column-rule: 1px solid #cccccc; /* Firefox */
+	column-rule: 1px solid #cccccc;
+	-webkit-column-span: all; /* Chrome, Safari, Opera */
+	column-span: all;
+	/* -webkit-column-width:
+    -moz-column-width: ;
+    column-width: ; */
+}
+
+.modo-impressao .page:first-child .conteudo-impressao img {
+	text-align: center;
+}
+
+
+/**
+  * Custom loader
+  * Utilizado quando a aula e chamada com parametro get imprimir
+  * pelo creator desktop
+  */
+#impressao-container-loader {
+	position: fixed;
+	background-color: white;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 999;
+}
+#loader-impressao {
+	animation: animate-loader-impressao 1.5s linear infinite;
+	clip: rect(0, 80px, 80px, 40px); 
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	left: calc(50% - 40px);
+	top: calc(50% - 40px);
+}
+@keyframes animate-loader-impressao {
+	0% { 
+	  transform: rotate(0deg)
+	}
+	100% { 
+	  transform: rotate(220deg)
+	}
+}
+#loader-impressao:after {
+	animation: animate-loader-impressao2 1.5s ease-in-out infinite;
+	clip: rect(0, 80px, 80px, 40px);
+	content:'';
+	border-radius: 50%; 
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	box-shadow: inset black 0 0 0 3px;
+  } 
+@keyframes animate-loader-impressao2 {
+	0% {
+	  transform: rotate(-140deg);
+	}
+	100% {
+	  transform: rotate(140deg);
+	}
+}
+
+/* Cabeçalho do plano de aula professor */
+.modo-impressao .cabecalho-professor {
+	border-bottom: 1px solid #c2c2c2;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.modo-impressao .cabecalho-professor p {
+	margin: 2px 0;
+}

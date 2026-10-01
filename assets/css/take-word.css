@@ -1,0 +1,58 @@
+:root {
+    --primary: #007AC0;
+    --background: #FFF;
+}
+
+.take-word .word {
+    width: 100%;
+    text-align: center;
+}
+
+.take-word .table {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    border: 1px solid var(--primary);
+}
+
+.take-word .letter {
+    margin: 0;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    user-select: none;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    background-color: var(--background);
+}
+
+.take-word .letter:before {
+    content: "";
+    display: block;
+    margin-top: 100%;
+}
+
+.take-word .letter.selected {
+    color: var(--background);
+    background-color: var(--primary);
+}
+
+.take-word .letter.hover {
+    border-width: 6px;
+}
+
+[data-contraste="altocontraste"] .table,
+[data-contraste="altocontraste"] .letter {
+    border-color: yellow !important;
+}
+
+[data-contraste="altocontraste"] .letter.selected {
+    color: #000 !important;
+    background-color: yellow !important;
+}

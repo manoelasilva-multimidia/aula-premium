@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'UnityText';
+    font-style: normal;
+    font-weight: 400;
+    src: url('tccc-unitytext-regular.ttf')
+}
+
+@font-face {
+    font-family: 'UnityText';
+    font-style: normal;
+    font-weight: bold;
+    src: url('tccc-unitytext-bold.ttf')
+}

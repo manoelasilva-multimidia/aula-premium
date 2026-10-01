@@ -1,0 +1,19 @@
+{
+  "1": {
+    "habilidades": [
+      {
+        "id": "309",
+        "codigo": "EF02CI04"
+      },
+      {
+        "id": "310",
+        "codigo": "EF02CI05"
+      }
+    ],
+    "extras": [],
+    "categoria": {
+      "id": "2",
+      "codigo": "Ensino Fundamental"
+    }
+  }
+}

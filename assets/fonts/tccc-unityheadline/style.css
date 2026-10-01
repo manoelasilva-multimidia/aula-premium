@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'UnityHeadline';
+    font-style: normal;
+    font-weight: 400;
+    src: url('tccc-unityheadline-regular.ttf')
+}
+
+@font-face {
+    font-family: 'UnityHeadline';
+    font-style: normal;
+    font-weight: bold;
+    src: url('tccc-unityheadline-bold.ttf')
+}

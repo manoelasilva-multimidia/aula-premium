@@ -1,0 +1,100 @@
+.cores1 p, .cores1 button, .cores1 select, .cores1 div, .cores1 a, .cores1 h1, .cores1 h2, .cores1 input, .cores1 textarea {
+    color: var(--texto)
+}
+
+.cores1 p:focus, .cores1 h1:focus, .cores1 h2:focus, .cores1 #localHTML img:focus, .cores1 .indicador-foco:focus, .cores1 label:focus {
+    border: 2px solid var(--texto-focus);
+    border-radius: 5px;
+    background-color: var(--texto-bg-focus);
+    outline: none;
+}
+
+[data-contraste="altocontraste"] p:focus, [data-contraste="altocontraste"] h1:focus, [data-contraste="altocontraste"] h2:focus, [data-contraste="altocontraste"] #localHTML img:focus, [data-contraste="altocontraste"] .indicador-foco:focus, [data-contraste="altocontraste"] label:focus, [data-contraste="altocontraste"] .button:focus {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: none;
+}
+
+[data-contraste="altocontraste"] .button:hover, [data-contraste="altocontraste"] .button:active {
+    box-shadow: none !important;
+}
+
+.cores1 .button {
+    border: 0;
+    padding: 5px 10px;
+    margin: 0px 3px 3px 0px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #777;
+    text-decoration: none;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    background-color: #e6e9eb;
+    border-bottom: 5px solid rgb(185, 185, 185);
+    text-shadow: 0px 1px rgb(207, 207, 207)
+}
+
+.cores1 .button:hover {
+    cursor: pointer;
+}
+
+.cores1 .button:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    border-bottom: 1px solid;
+}
+
+.cores1 .button:active {
+    padding-top: 7px;
+    padding-bottom: 3px
+}
+
+.cores1 .button.is-success {
+    background-color: var(--main-cor-sucesso);
+    border-bottom: 5px solid var(--button-success-border-bottom);
+    text-shadow: 0px -2px #41a85f;
+    color: white;
+}
+
+.cores1 .button.is-white {
+    background-color: transparent;
+    border: 1px solid #efefef;
+    border-bottom: 5px solid #e2e2e2;
+    color: var(--texto);
+}
+
+.cores1 .button.cinza {
+    background-color: #e6e9eb;
+    border-bottom: 5px solid rgb(185, 185, 185);
+    text-shadow: 0px 1px rgb(207, 207, 207);
+    color: #484848;;
+}
+
+.cores1 .button:disabled {
+    background-color: #e6e9eb;
+    border-bottom: 5px solid rgb(185, 185, 185);
+    text-shadow: 0px 1px rgb(207, 207, 207);
+    color: rgb(82, 82, 82)
+}
+
+.cores1 {
+    background-color: var(--main-background-color);
+}
+
+.cores1 .blocoConteudo {
+    background-color: white;
+    border-radius: 5px;
+}
+
+button:disabled {
+    background: none !important;
+    background-color: #e2e2e2 !important
+}
+
+body[data-splashbackground] #menu-modo-minimo .btnVoltarDisabled {
+    background-color: black !important
+}
+
+body:not([data-splashbackground]) .card-shadow {
+    box-shadow: 0 0.5em 1em -0.125em rgba(185,196,212,0.5),0 0px 0 1px rgba(185,196,212,0.1) !important;
+}
